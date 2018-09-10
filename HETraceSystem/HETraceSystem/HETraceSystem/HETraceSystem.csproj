@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D8B68F9-51E4-4E05-B9AB-9999A424B79B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HETraceSystem</RootNamespace>
+    <AssemblyName>HETraceSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Barcod.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vista Api">
+      <HintPath>lib\Vista Api.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WinFormsUI">
+      <HintPath>lib\WinFormsUI.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>lib\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\AddProductTypeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\AddProductTypeDlg.Designer.cs">
+      <DependentUpon>AddProductTypeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\AsmConfigDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\AsmConfigDlg.Designer.cs">
+      <DependentUpon>AsmConfigDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\CalibrationDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\CalibrationDlg.Designer.cs">
+      <DependentUpon>CalibrationDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DeliveryCfgDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\DeliveryCfgDlg.Designer.cs">
+      <DependentUpon>DeliveryCfgDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\ExInventoryInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\ExInventoryInfoDlg.Designer.cs">
+      <DependentUpon>ExInventoryInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\InventoryInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\InventoryInfoDlg.Designer.cs">
+      <DependentUpon>InventoryInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManualImportDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualImportDlg.Designer.cs">
+      <DependentUpon>ManualImportDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\ScanConfigDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\ScanConfigDlg.Designer.cs">
+      <DependentUpon>ScanConfigDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\PrintConfigDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\PrintConfigDlg.Designer.cs">
+      <DependentUpon>PrintConfigDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\ProductCfgDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\ProductCfgDlg.Designer.cs">
+      <DependentUpon>ProductCfgDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\ProductTypeCfgDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\ProductTypeCfgDlg.Designer.cs">
+      <DependentUpon>ProductTypeCfgDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CodeShowCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CodeShowCtrl.Designer.cs">
+      <DependentUpon>CodeShowCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\HE_DockPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\HE_DockPanel.Designer.cs">
+      <DependentUpon>HE_DockPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DataBaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\DataBaseConfig.Designer.cs">
+      <DependentUpon>DataBaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ProgressBar.designer.cs">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryInfoDlg.Designer.cs">
+      <DependentUpon>DeliveryInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManualOutPutDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualOutPutDlg.Designer.cs">
+      <DependentUpon>ManualOutPutDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutFileDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutFileDlg.Designer.cs">
+      <DependentUpon>OutFileDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintDlg.Designer.cs">
+      <DependentUpon>PrintDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductImportDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductImportDlg.Designer.cs">
+      <DependentUpon>ProductImportDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductRegDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductRegDlg.Designer.cs">
+      <DependentUpon>ProductRegDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductListDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductListDlg.Designer.cs">
+      <DependentUpon>ProductListDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleImportDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingleImportDlg.Designer.cs">
+      <DependentUpon>SingleImportDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tbox\CTProductRegDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tbox\CTProductRegDlg.Designer.cs">
+      <DependentUpon>CTProductRegDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tbox\Config\CTProductCfgDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tbox\Config\CTProductCfgDlg.Designer.cs">
+      <DependentUpon>CTProductCfgDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tbox\ExDeliveryInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tbox\ExDeliveryInfoDlg.Designer.cs">
+      <DependentUpon>ExDeliveryInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DBInfo.cs" />
+    <Compile Include="Utils\ImgConvert.cs" />
+    <Compile Include="Utils\PrintPOSTEKLib.cs" />
+    <Compile Include="Utils\SystemUtils.cs" />
+    <Compile Include="Utils\WorkSpace.cs" />
+    <EmbeddedResource Include="Config\AddProductTypeDlg.resx">
+      <DependentUpon>AddProductTypeDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\AsmConfigDlg.resx">
+      <DependentUpon>AsmConfigDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\CalibrationDlg.resx">
+      <DependentUpon>CalibrationDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DeliveryCfgDlg.resx">
+      <DependentUpon>DeliveryCfgDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\ExInventoryInfoDlg.resx">
+      <DependentUpon>ExInventoryInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\InventoryInfoDlg.resx">
+      <DependentUpon>InventoryInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualImportDlg.resx">
+      <DependentUpon>ManualImportDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\ScanConfigDlg.resx">
+      <DependentUpon>ScanConfigDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\PrintConfigDlg.resx">
+      <DependentUpon>PrintConfigDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\ProductCfgDlg.resx">
+      <DependentUpon>ProductCfgDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\ProductTypeCfgDlg.resx">
+      <DependentUpon>ProductTypeCfgDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CodeShowCtrl.resx">
+      <DependentUpon>CodeShowCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DataBaseConfig.resx">
+      <DependentUpon>DataBaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryInfoDlg.resx">
+      <DependentUpon>DeliveryInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualOutPutDlg.resx">
+      <DependentUpon>ManualOutPutDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutFileDlg.resx">
+      <DependentUpon>OutFileDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintDlg.resx">
+      <DependentUpon>PrintDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductImportDlg.resx">
+      <DependentUpon>ProductImportDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductRegDlg.resx">
+      <DependentUpon>ProductRegDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductListDlg.resx">
+      <DependentUpon>ProductListDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SingleImportDlg.resx">
+      <DependentUpon>SingleImportDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tbox\CTProductRegDlg.resx">
+      <DependentUpon>CTProductRegDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tbox\Config\CTProductCfgDlg.resx">
+      <DependentUpon>CTProductCfgDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tbox\ExDeliveryInfoDlg.resx">
+      <DependentUpon>ExDeliveryInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="logo.pcx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COMM\COMM.csproj">
+      <Project>{97a9d9f0-a58d-4d51-9602-f10bf28e32f6}</Project>
+      <Name>COMM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{cee2f5e3-8cf6-493e-8e49-378e62364fc9}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KISControls\Source\KISControls.csproj">
+      <Project>{D57466BE-97D8-41DA-89B5-D43FBF06B18F}</Project>
+      <Name>KISControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDL\MDL.csproj">
+      <Project>{42a14b43-f453-4c04-b186-cc8800386d0c}</Project>
+      <Name>MDL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RawInput\RawInput.csproj">
+      <Project>{4143d085-38cf-4640-bb05-2fdffaf94d76}</Project>
+      <Name>RawInput</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="add.png" />
+    <None Include="addt.png" />
+    <Content Include="Barcod.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dashboard_16px_1181791_easyicon.net.ico" />
+    <Content Include="img\barcode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\product.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\QRCodeTag.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\QRCodeTagBig.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\QRCodeTbox.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\QRCodeTemp.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\QRCodeV.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="remove.png" />
+    <None Include="playpng.png" />
+    <Content Include="WINPSK.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

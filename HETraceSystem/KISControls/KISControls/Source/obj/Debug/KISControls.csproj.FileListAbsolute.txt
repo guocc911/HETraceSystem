@@ -1,0 +1,9 @@
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\bin\Debug\License.txt
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\bin\Debug\KISControls.dll
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\bin\Debug\KISControls.pdb
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\obj\Debug\KISControls.csprojResolveAssemblyReference.cache
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\obj\Debug\KIS.Controls.Windows.HeaderPanel.resources
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\obj\Debug\KIS.Properties.Resources.resources
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\obj\Debug\KISControls.csproj.GenerateResource.Cache
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\obj\Debug\KISControls.dll
+E:\Project\HappyEVTraceSystem\KISControls\KISControls\Source\obj\Debug\KISControls.pdb

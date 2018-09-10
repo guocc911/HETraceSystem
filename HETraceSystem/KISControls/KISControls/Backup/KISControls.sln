@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KISControls", "Source\KISControls.csproj", "{D57466BE-97D8-41DA-89B5-D43FBF06B18F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHeaderPanel", "Testing\TestHeaderPanel.csproj", "{0E0C4CC5-5FCD-4392-AB84-C19AAB955C5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D57466BE-97D8-41DA-89B5-D43FBF06B18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57466BE-97D8-41DA-89B5-D43FBF06B18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57466BE-97D8-41DA-89B5-D43FBF06B18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57466BE-97D8-41DA-89B5-D43FBF06B18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0C4CC5-5FCD-4392-AB84-C19AAB955C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0C4CC5-5FCD-4392-AB84-C19AAB955C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0C4CC5-5FCD-4392-AB84-C19AAB955C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0C4CC5-5FCD-4392-AB84-C19AAB955C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
